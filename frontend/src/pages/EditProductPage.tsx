@@ -74,10 +74,21 @@ export default function EditProductPage() {
   if (!initial) return null;
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-2xl font-bold mb-6 text-gray-800">Editar producto</h1>
+    <div className="min-h-screen bg-slate-50">
+      <div className="max-w-3xl mx-auto px-4 py-10">
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold tracking-tight text-slate-900">
+            Editar producto
+          </h1>
+          <p className="mt-1 text-sm text-slate-500">
+            Modifica la información del producto y guarda los cambios.
+          </p>
+        </div>
 
-      <ProductForm initialData={initial} onSubmit={handleUpdate} />
+        <div className="bg-white border border-slate-200 rounded-2xl shadow-sm p-6 sm:p-8">
+          <ProductForm initialData={initial} onSubmit={handleUpdate} />
+        </div>
+      </div>
     </div>
   );
 }
