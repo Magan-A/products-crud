@@ -15,7 +15,14 @@ export function useProducts() {
       const data = await getProducts(query);
       setProducts(data);
     } catch {
-      Swal.fire("Error", "No se pudieron cargar los productos", "error");
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: "No se pudieron cargar los productos",
+        timer: 2000,
+        showConfirmButton: false,
+        timerProgressBar: true,
+      });
     } finally {
       setLoading(false);
     }
@@ -34,7 +41,14 @@ export function useProducts() {
     if (!result.isConfirmed) return;
 
     await deleteProduct(id);
-    Swal.fire("Eliminado", "Producto eliminado correctamente", "success");
+    Swal.fire({
+      icon: "success",
+      title: "Eliminado",
+      text: "Producto eliminado correctamente",
+      timer: 2000,
+      showConfirmButton: false,
+      timerProgressBar: true,
+    });
     fetchProducts(search);
   };
 

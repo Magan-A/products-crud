@@ -18,6 +18,9 @@ export default function CreateProductPage() {
         title: "Producto creado",
         text: "El producto se creó exitosamente",
         confirmButtonColor: "#2563eb",
+        timer: 2000,
+        showConfirmButton: false,
+        timerProgressBar: true,
       });
 
       navigate("/");
@@ -26,6 +29,9 @@ export default function CreateProductPage() {
         icon: "error",
         title: "Error",
         text: "No se pudo crear el producto. Intente de nuevo.",
+        timer: 2000,
+        showConfirmButton: false,
+        timerProgressBar: true,
       });
       console.error(error);
     }

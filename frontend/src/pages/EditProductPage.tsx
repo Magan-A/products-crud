@@ -29,6 +29,9 @@ export default function EditProductPage() {
           icon: "error",
           title: "Error",
           text: "No se pudo cargar el producto",
+          timer: 2000,
+          showConfirmButton: false,
+          timerProgressBar: true,
         });
         console.error(error);
         navigate("/");
@@ -51,6 +54,9 @@ export default function EditProductPage() {
         title: "Producto actualizado",
         text: "Los cambios se guardaron correctamente",
         confirmButtonColor: "#2563eb",
+        timer: 2000,
+        showConfirmButton: false,
+        timerProgressBar: true,
       });
 
       navigate("/");
@@ -59,6 +65,9 @@ export default function EditProductPage() {
         icon: "error",
         title: "Error",
         text: "No se pudo actualizar el producto",
+        timer: 2000,
+        showConfirmButton: false,
+        timerProgressBar: true,
       });
       console.error(error);
     }
